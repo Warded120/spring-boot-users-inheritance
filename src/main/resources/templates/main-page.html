@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+    <h1 class="h3">Welcome, <span th:text="${session.user.username}"></span></h1>
+
+    <div th:if="${session.userType == 'student'}">
+        <div th:text="${session.user.roles}"></div>
+        <div th:text="${session.user.studentData.firstName}"></div>
+        <div th:text="${session.user.studentData.lastName}"></div>
+        <div th:text="${session.user.studentData.age}"></div>
+        <div th:text="${session.user.studentData.fatherLine}"></div>
+    </div>
+
+    <div th:if="${session.userType == 'teacher'}">
+        <div th:text="${session.user.roles}"></div>
+        <div th:text="${session.user.teacherData.firstName}"></div>
+        <div th:text="${session.user.teacherData.lastName}"></div>
+        <div th:text="${session.user.teacherData.age}"></div>
+        <div th:text="${session.user.teacherData.wifeName}"></div>
+        <div th:text="${session.user.teacherData.childrenAmount}"></div>
+    </div>
+</body>
+</html>

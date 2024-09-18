@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>user confirmed</title>
+</head>
+<body>
+    Student confirmed!<br>
+
+    <div th:text="${student.username}"></div>
+    <div th:text="${student.roles}"></div>
+    <div th:text="${student.studentData.firstName}"></div>
+    <div th:text="${student.studentData.lastName}"></div>
+    <div th:text="${student.studentData.age}"></div>
+    <div th:text="${student.studentData.fatherLine}"></div>
+
+    <a th:href="@{/login}">login with created student</a>
+</body>
+</html>

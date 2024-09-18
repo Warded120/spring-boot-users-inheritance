@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>user confirmed</title>
+</head>
+<body>
+    Teacher confirmed!<br>
+
+    <div th:text="${teacher.username}"></div>
+    <div th:text="${teacher.roles}"></div>
+    <div th:text="${teacher.teacherData.firstName}"></div>
+    <div th:text="${teacher.teacherData.lastName}"></div>
+    <div th:text="${teacher.teacherData.age}"></div>
+    <div th:text="${teacher.teacherData.wifeName}"></div>
+    <div th:text="${teacher.teacherData.childrenAmount}"></div>
+
+    <a th:href="@{/login}">login with created teacher</a>
+</body>
+</html>
